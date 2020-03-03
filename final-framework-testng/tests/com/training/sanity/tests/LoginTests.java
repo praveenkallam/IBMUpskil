@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -34,22 +35,30 @@ public class LoginTests {
 	public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver); 
-		baseUrl = properties.getProperty("baseURL");
+		baseUrl = properties.getProperty("BaseURL");
 		screenShot = new ScreenShot(driver); 
-		// open the browser 
+		//open the browser 
 		driver.get(baseUrl);
 	}
 	
 	@AfterMethod
 	public void tearDown() throws Exception {
-		Thread.sleep(1000);
-		driver.quit();
+		Thread.sleep(100);
+		//driver.quit();
 	}
 	@Test
 	public void validLoginTest() {
+		//Actions action = new Actions (driver);
+		//WebDriver driver=new ChromeDriver();
+		driver.get("http://uniformm1.upskills.in/admin/");
 		loginPOM.sendUserName("admin");
 		loginPOM.sendPassword("admin@123");
 		loginPOM.clickLoginBtn(); 
-		screenShot.captureScreenShot("First");
+		//screenShot.captureScreenShot("First");
+	}
+
+	private Object navigate() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
