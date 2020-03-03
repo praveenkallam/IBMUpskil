@@ -2,34 +2,18 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21035" started-at="2020-03-03T06:12:03Z" finished-at="2020-03-03T06:12:24Z">
+  <suite name="Default suite" duration-ms="46" started-at="2020-03-03T06:49:31Z" finished-at="2020-03-03T06:49:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21035" started-at="2020-03-03T06:12:03Z" finished-at="2020-03-03T06:12:24Z">
+    <test name="Default test" duration-ms="46" started-at="2020-03-03T06:49:31Z" finished-at="2020-03-03T06:49:31Z">
       <class name="com.training.sanity.tests.Uniform1">
-        <test-method status="FAIL" signature="test()[pri:0, instance:com.training.sanity.tests.Uniform1@2eee9593]" name="test" duration-ms="21018" started-at="2020-03-03T11:42:03Z" finished-at="2020-03-03T11:42:24Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="FAIL" signature="test()[pri:0, instance:com.training.sanity.tests.Uniform1@75412c2f]" name="test" duration-ms="26" started-at="2020-03-03T12:19:31Z" finished-at="2020-03-03T12:19:31Z">
+          <exception class="java.lang.NoClassDefFoundError">
             <message>
-              <![CDATA[Timed out waiting for driver server to start.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-05S6B3Q', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
-Driver info: driver.version: ChromeDriver]]>
+              <![CDATA[org/openqa/selenium/WebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-05S6B3Q', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
-	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
-	at com.training.utility.DriverFactory.getDriver(DriverFactory.java:24)
+              <![CDATA[java.lang.NoClassDefFoundError: org/openqa/selenium/WebDriver
 	at com.training.sanity.tests.Uniform1.test(Uniform1.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -55,18 +39,15 @@ Driver info: driver.version: ChromeDriver
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:22367/status] to be available after 20002 ms
-	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
-	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
-	... 34 more
-Caused by: java.util.concurrent.TimeoutException
-	at java.util.concurrent.FutureTask.get(Unknown Source)
-	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
-	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
-	... 35 more
+Caused by: java.lang.ClassNotFoundException: org.openqa.selenium.WebDriver
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 25 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.NoClassDefFoundError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->

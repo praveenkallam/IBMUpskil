@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 03 11:42:03 IST 2020</td>
+<td>Started on:</td><td>Tue Mar 03 12:19:31 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>21 seconds (21035 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (46 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,20 +76,7 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.training.sanity.tests.Uniform1.test()'><b>test</b><br>Test class: com.training.sanity.tests.Uniform1</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-05S6B3Q&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
-	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at com.training.utility.DriverFactory.getDriver(DriverFactory.java:24)
+<td><div><pre>java.lang.NoClassDefFoundError: org/openqa/selenium/WebDriver
 	at com.training.sanity.tests.Uniform1.test(Uniform1.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -115,30 +102,14 @@ Driver info: driver.version: ChromeDriver
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:22367/status] to be available after 20002 ms
-	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
-	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
-	... 34 more
-Caused by: java.util.concurrent.TimeoutException
-	at java.util.concurrent.FutureTask.get(Unknown Source)
-	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
-	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
-	... 35 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1279309678", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1279309678'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-05S6B3Q&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
-	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at com.training.utility.DriverFactory.getDriver(DriverFactory.java:24)
+Caused by: java.lang.ClassNotFoundException: org.openqa.selenium.WebDriver
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 25 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1720435669", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1720435669'><pre>java.lang.NoClassDefFoundError: org/openqa/selenium/WebDriver
 	at com.training.sanity.tests.Uniform1.test(Uniform1.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -164,18 +135,15 @@ Driver info: driver.version: ChromeDriver
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:22367/status] to be available after 20002 ms
-	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
-	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
-	... 34 more
-Caused by: java.util.concurrent.TimeoutException
-	at java.util.concurrent.FutureTask.get(Unknown Source)
-	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
-	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
-	... 35 more
+Caused by: java.lang.ClassNotFoundException: org.openqa.selenium.WebDriver
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 25 more
 </pre></div></td>
-<td>21</td>
-<td>com.training.sanity.tests.Uniform1@2eee9593</td></tr>
+<td>0</td>
+<td>com.training.sanity.tests.Uniform1@75412c2f</td></tr>
 </table><p>
 </body>
 </html>
